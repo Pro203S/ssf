@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슈의 라면가게</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="game">
+        <img
+            id="mainBg"
+            class="main-bg"
+            src="assets/images/backgrounds/main.png"
+            alt="슈의 라면집"
+            draggable="false"
+        >
+
+        <button type="button" class="main-pot main-pot--howto" id="howToBtn">
+            <span class="main-pot-label">게임설명</span>
+            <img class="main-pot-img" src="assets/images/game_assets/cooking_pot.png" alt="" draggable="false">
+            <img class="main-pot-lid" src="assets/images/lid.png" alt="" draggable="false">
+        </button>
+
+        <a class="main-pot main-pot--start" href="game/" id="gameBtn">
+            <span class="main-pot-label">게임시작</span>
+            <img class="main-pot-img" src="assets/images/game_assets/cooking_pot.png" alt="" draggable="false">
+            <img class="main-pot-lid" src="assets/images/lid.png" alt="" draggable="false">
+        </a>
+    </div>
+
+    <script src="audio.js" defer></script>
+    <script src="index.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "Dajeong";
+    src: url("assets/fonts/dajeong.woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcf7d9;
+}
+
+#game {
+    position: relative;/*position*/
+    width: 592px;
+    height: 476px;
+}
+
+.main-bg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+}
+
+#game.is-tutorial .main-bg {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+#game.is-tutorial .main-pot {
+    display: none;
+}
+
+.main-pot {
+    position: absolute;/*position*/
+    width: 140px;
+    height: 140px;
+    overflow: visible;
+    border: none;
+    background: transparent;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 2; /* z-index*/
+}
+
+.main-pot--howto {
+    left: 17px;
+    top: 163px;
+}
+
+.main-pot--start {
+    left: 178px;
+    top: 163px;
+}
+
+.main-pot-img {
+    position: absolute;/*position*/
+    left: 12px;
+    bottom: 0;
+    width: 116px;
+    height: 73px;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+.main-pot-lid {
+    position: absolute;/*position*/
+    left: 26px;
+    top: 64px;
+    width: 89px;
+    height: 53px;
+    display: block;
+    transform-origin: left 75%;
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;/* z-index*/
+}
+
+.main-pot:hover .main-pot-lid,
+.main-pot:focus-visible .main-pot-lid {
+    transform: rotate(-20deg);
+}
+
+.main-pot-label {
+    position: absolute;/*position*/
+    left: 100px;
+    top: 18px;
+    display: flex;
+    width: 150px;
+    height: 100px;
+    padding-left: 30px;
+    justify-content: center;
+    align-items: center;
+    background: url("assets/images/pot_talk_bubble.png") center / contain no-repeat;
+    color: #b57102;
+    font-family: "Dajeong", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -5%;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    z-index: 3;/* z-index*/
+}
+
+.main-pot:hover,
+.main-pot:focus-visible {
+    z-index: 3;/* z-index*/
+}
+
+.main-pot-steam {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 1;/* z-index*/
+}
+
+.main-pot:hover .main-pot-label,
+.main-pot:focus-visible .main-pot-label,
+.main-pot:hover .main-pot-steam,
+.main-pot:focus-visible .main-pot-steam {
+    opacity: 1;
+}
+
+.main-pot:hover .steam-1,
+.main-pot:focus-visible .steam-1 {
+    transform: translateY(-4px);
+}
+
+.main-pot:hover .steam-2,
+.main-pot:focus-visible .steam-2 {
+    transform: translateY(-6px);
+}
+
+.main-pot:focus-visible {
+    outline: 2px solid #ff4da6;
+    outline-offset: 4px;
+}

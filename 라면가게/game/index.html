@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>슈의 라면가게</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <div class="game-container">
+        <canvas> </canvas>
+
+        <img id="cursorImage" src="" />
+
+        <img class="cooking-pot pot1" src="/assets/images/game_assets/cooking_pot.png" />
+        <img class="cooking-pot pot2" src="/assets/images/game_assets/cooking_pot.png" />
+        <img class="cooking-pot pot3" src="/assets/images/game_assets/cooking_pot.png" />
+        <img class="cooking-pot pot4" src="/assets/images/game_assets/cooking_pot.png" />
+
+        <div class="cooking-pot-clip pot1-clip"></div>
+        <div class="cooking-pot-clip pot2-clip"></div>
+        <div class="cooking-pot-clip pot3-clip"></div>
+        <div class="cooking-pot-clip pot4-clip"></div>
+
+        <div class="water-layer pot1-water"></div>
+        <div class="water-layer pot2-water"></div>
+        <div class="water-layer pot3-water"></div>
+        <div class="water-layer pot4-water"></div>
+
+        <img class="cooking-pot-guard pot1" src="/assets/images/game_assets/cooking_pot_guard.png" />
+        <img class="cooking-pot-guard pot2" src="/assets/images/game_assets/cooking_pot_guard.png" />
+        <img class="cooking-pot-guard pot3" src="/assets/images/game_assets/cooking_pot_guard.png" />
+        <img class="cooking-pot-guard pot4" src="/assets/images/game_assets/cooking_pot_guard.png" />
+
+        <img id="pot" src="/assets/images/game_assets/pot.png" />
+
+        <div id="heldCookingPot" class="held-cooking-pot"></div>
+
+        <div class="hud-timer" id="hudTimer">
+            <div class="hud-timer-bar">
+                <div id="timerFill" class="hud-timer-fill"></div>
+            </div>
+        </div>
+
+        <div class="hud-income" id="hudIncome">
+            <div class="hud-income-label">수입금</div>
+            <div id="scoreDisplay" class="hud-score">0</div>
+        </div>
+
+        <div class="hud-customer" id="hudCustomer" style="display: none"></div>
+
+        <div id="endScreen" class="end-screen" hidden></div>
+    </div>
+
+    <script src="../audio.js" defer></script>
+    <script src="library.js" defer></script>
+    <script src="index.js" defer></script>
+</body>
+
+</html>
