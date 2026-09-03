@@ -1,26 +1,26 @@
 let bgStatus = 0;
 
-document.addEventListener("DOMContentLoaded", async () => {
-    const game = document.querySelector("#game");
-    const mainBg = document.querySelector("#mainBg");
-    const howToBtn = document.querySelector("#howToBtn");
-    const gameBtn = document.querySelector("#gameBtn");
+document.addEventListener("[①]", async () => {
+    const game = document.[②]("#game");
+    const mainBg = document.[③]("#mainBg");
+    const howToBtn = document.[④]("#howToBtn");
+    const gameBtn = document.[⑤]("#gameBtn");
 
     // 메인 화면
-    game.addEventListener("click", () => {
+    game.addEventListener("[⑥]", () => {
         if (bgStatus !== 1) return;
 
         mainBg.src = "/assets/images/backgrounds/main.png";
-        howToBtn.style.display = "block";
-        gameBtn.style.display = "block";
+        howToBtn.style.display = [⑦];
+        gameBtn.style.display = [⑧];
         bgStatus = 0;
     });
 
     // 게임 방법
-    howToBtn.addEventListener("click", () => {
+    howToBtn.addEventListener("[⑨]", () => {
         mainBg.src = "/assets/images/backgrounds/tutorial.png";
-        howToBtn.style.display = "none";
-        gameBtn.style.display = "none";
+        howToBtn.style.display = "[⑩]";
+        gameBtn.style.display = "[⑪]";
 
         setTimeout(() => {
             // 바로 바꾸면 안 떠서 0.1초 뒤에 바꾸기
@@ -41,12 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     // BGM 재생 (위치, 반복 여부, BGM 길이)
-    const player = new AudioPlayer(
-        "/assets/sounds/bgm/main.mp3",
-        true,
-        4.324
-    );
-
+    const player = new AudioPlayer("/assets/sounds/bgm/main.mp3", true, 4.324);
     await player.load();
     player.play();
 });
