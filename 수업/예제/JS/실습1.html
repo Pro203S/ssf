@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 실습 1 - Object 사용하기</title>
+</head>
+<body>
+    <script>
+        const sunrin = {
+            name: "선린인터넷고등학교",
+            birthYear: 1899,
+            location: "서울특별시 용산구 원효로97길 33-4",
+            majors: ["정보보호과", "소프트웨어과", "콘텐츠디자인과", "IT경영과"]
+        };
+
+        console.log(`${sunrin.name}는 ${sunrin.birthYear}에 개교하였고,`);
+        console.log(`${sunrin.location}에 위치해 있다.`);
+        console.log(`운영하고 있는 전공으로는,`);
+        console.log(`${sunrin.majors.join(', ')}가 있다.`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 실습 2 - 조건문 사용하기</title>
+</head>
+<body>
+    <script>
+        let num1 = prompt("첫 번째 숫자를 입력해주세요.");
+        let num2 = prompt("두 번째 숫자를 입력해주세요.");
+
+        console.log(`두 수의 합은 ${num1 + num2}`);
+        console.log(`두 수의 곱은 ${num1 * num2}`);
+        
+        if (num1 > num2) {
+            console.log(`${num1}은 ${num2}보다 큽니다.`);
+        } else if (num1 < num2) {
+            console.log(`${num1}은 ${num2}보다 작습니다.`);
+        } else {
+            console.log(`${num1}은 ${num2}와 같습니다.`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 실습 4 - DOM 활용</title>
+</head>
+<body>
+    <h1>텍스트를 입력하세요.</h1>
+    <input type="text">
+    <button>바꾸기</button>
+    <script>
+        const button = document.querySelector('button');
+        const h1 = document.querySelector('h1');
+        const input = document.querySelector('input');
+
+        button.addEventListener('click', () => {
+            h1.textContent = `${input.value}을(를) 입력했습니다.`;
+        })
+        
+    </script>
+</body>
+</html>
