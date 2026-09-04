@@ -13,9 +13,9 @@
 // #region 변수 선언
  
 // ---------- HTML 요소 ----------
-const canvas = document.[①]("canvas");// 클래스로 불러옴
+const canvas = document.[①]("canvas"); // 캔버스 요소
 const gameContainer = document.querySelector(".game-container");
-const cursorImage = document.[②]("cursorImage");//아이디로 불러옴
+const cursorImage = document.[②]("cursorImage"); //아이디로 불러옴
 const kettle = document.getElementById("pot");
 const scoreDisplay = document.getElementById("scoreDisplay");
 const hudTimer = document.getElementById("hudTimer");
