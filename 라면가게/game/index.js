@@ -397,7 +397,7 @@ function onGameClick(event) {
         return;
     }
 
-    const potIndex = potIndexFromZone(zone);
+    const potIndex = potIndexFromZone(zone.id);
 
     // 2) 트레이 클릭 → 냄비를 들고 있을 때만 서빙
     if (zone.id === ZONE_TRAY) {
